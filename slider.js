@@ -24,9 +24,9 @@ $(document).ready(function(){
     function changeBg(el, type, count, countmax) {
         
         el.style.backgroundImage = 'url(images/header'+count+'.'+type+')';
-        console.log(count)
+        //console.log(count)
         count++;
-        console.log(count)
+        //console.log(count)
         if (count> countmax){
         count=1;
         }
@@ -35,9 +35,9 @@ $(document).ready(function(){
     }
     document.querySelectorAll('.control div').forEach((item, i) => {
         item.style.opacity = '0.4';
-        console.log(item, i)
+        //console.log(item, i)
         item.addEventListener('click', ()=>{
-            console.log(item);
+           // console.log(item);
             counter1=i+1;
             header.style.backgroundImage = 'url(images/header'+counter1+'.jpg)';
             changeOpacityForAll()

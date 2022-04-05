@@ -34,17 +34,28 @@
         <div id="play-train">
             <h2>Play train sound</h2>
             <button class="play"></button>
+            <input id="volume-control" type="range" min="0" max="100" value="50">
         </div>
         
-        <div id="spotify-player">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2MqKdstlrUQUa9PD7vEnSt?utm_source=generator" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <div class="player-div" id="spotify">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2MqKdstlrUQUa9PD7vEnSt?utm_source=generator" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write;  fullscreen; picture-in-picture" ></iframe>
         </div>
-        <div id="form">
+        <div class="form">
             <h3>Want your own music? Paste a link to Spotify playlist or album below</h3>
-            <input type="text" id="url-input" name="userPlaylistUrl" placeholder="Paste your spotify link here" value="" autocomplete="off">
+            <input type="text" class="url-input" id="SpotifyInput"  name="userPlaylistUrl" placeholder="Paste your spotify link here" value="" autocomplete="off">
             <button id="submit-url" class="btn">Submit playlist</button>
             <!--<input type="submit" id="submit-url" value="Load playlist">-->
         </div>
+        <div class="player-div" id="youtube">
+            <iframe  height="200" src="https://www.youtube.com/embed/videoseries?list=PLzi18IgZbYkYdHN5F0e2oJWvYRLjW9cxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="form">
+            <h3>Want your own music? Paste a link to YouTube playlist below</h3>
+            <input type="text" class="url-input" id="youtubeInput" name="userPlaylistUrl" placeholder="Paste your YouTube link here" value="" autocomplete="off">
+            <button id="submit-url1" class="btn">Submit playlist</button>
+            <!--<input type="submit" id="submit-url" value="Load playlist">-->
+        </div>
+
         <button id="changeBg" class="btn">Change background gif</button>
     </div>
 </body>
