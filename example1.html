@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="example1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+</head>
+<body>
+    <div id="background">
+        
+            <h1>ПРАТ "ФАРМАЦЕВТИЧНА ФІРМА «ДАРНИЦЯ»</h1>
+            <div id="container">
+        <div id="main-inf">
+        <p>Українська фармацевтична компанія, яка створена 1938 року. Станом на 2016-2017
+             рр «Дарниця» разом з «Фармак» та «Артеріум» входила у трійку лідерів 
+             фармацевтичних підприємств України за об'ємом виручки у грошовому еквіваленті. 
+             Фармацевтична фірма «Дарниця» виготовляє більше 250 найменувань готових лікарських 
+             засобів. Потужності компанії, розташовані на близько 30 тис. м² виробничих 
+             приміщень, дозволяють випускати більше 460 млн ампул, 4,2 млрд таблеток, 50 
+             млн туб м'яких лікарських форм тощо. «Дарниця» експортує свою продукцію в 11 
+             країн світу. У 2018 році «Дарниця» збільшила чистий прибуток на 31% в порівнянні 
+             з 2017 роком — до 449,1 млн грн. Представництво «Дарниці» входить до трійки 
+             найбільш відвідуваних майданчиків Кідландії. Ігрову станцію створено з метою 
+             зацікавити юних винахідників збагнути складний процес створення ліків, в ігровій 
+             формі відтворити ключові етапи виробничого циклу, де маленькі відвідувачі можуть 
+             інтегруватися особисто.</p>
+             <div class="slider">
+                <ul>
+                    <div id="img-div">
+                    <img src="images/img1.png" id='slider_img'>
+                    </div>   
+                    <div class="control">
+                        <div id="c1"></div>
+                        <div id="c2"></div>
+                    </div>
+                </ul>
+                </div>
+            
+                    </div>
+                    </div>
+                </div>
+            
+            
+            
+            
+            
+            
+            
+                <script src='jquery-3.4.1.slim.js'></script>
+            
+                <script>
+                    
+                 
+                 
+                  $(document).ready(function(){
+                    let a=1;
+                    let img_counter=2;
+                    /*
+                    let img_counter=3;
+                    //на случай если у тебя 3 картинки
+                    */
+                    let counter=1;
+                    let img =document.getElementById('slider_img');
+/*Картинки для слайдера должны быть формата png и называться img1 (img2 img3 и тд)
+    можно использовать jpg например, но тогда надо заменить все png в скрипте на jpg. 
+    название не то что можно, а даже нужно поменять на своё. Главное что б у всех картинок слайдера оно было одинаковым и отличалось только цифрой в конце
+    каждое название должно иметь цифру в конце. первая картинка 1, вторая 2, третя 3 и тд. (парк1.jpg, парк2.jpg)
+*/
+                    setInterval(function(){
+                        img.setAttribute('src', 'images/img'/*если у тебя картинка называется по другому, замени img на своё название. Тут и дальше*/+counter+'.png'/*аналогично как и с названием*/);
+                        $(`.control div`).css('opacity', '0.4')
+                       $(`#c${counter}`).css('opacity', '1')
+            
+                                  counter++;
+            if (counter> img_counter){
+                counter=1;
+            }
+                    },6000);
+            
+             
+            $('#c1').click(function(){
+                img.setAttribute('src', 'images/img'+1+'.png');
+                $('#c1').css('opacity', '1');
+                $('#c2').css('opacity', '0.4');
+            });
+            $('#c2').click(function(){
+                img.setAttribute('src', 'images/img'+2+'.png');
+                $('#c2').css('opacity', '1');
+                $('#c1').css('opacity', '0.4');
+            });
+        /*  $('#c1').click(function(){
+                img.setAttribute('src', 'images/img'+1+'.png');
+                $('#c1').css('opacity', '1');
+                $('#c2').css('opacity', '0.4');
+                $('#c3').css('opacity', '0.4');
+            });
+            $('#c2').click(function(){
+                img.setAttribute('src', 'images/img'+2+'.png');
+                $('#c2').css('opacity', '1');
+                $('#c1').css('opacity', '0.4');
+                $('#c3').css('opacity', '0.4');
+            });
+            $('#c3').click(function(){
+                img.setAttribute('src', 'images/img'+3+'.png');
+                $('#c3').css('opacity', '1');
+                $('#c2').css('opacity', '0.4');
+                $('#c1').css('opacity', '0.4');
+            });
+            //На случай если у тебя 3 картинки
+        */
+            $('.slider').hover(function(){
+                setInterval(function(){
+                       let img =document.getElementById('slider_img');
+                       $(`.control div`).css('opacity', '0.4')
+                       $(`#c${counter}`).css('opacity', '1')
+                        img.setAttribute('src', 'images/img'+counter+'.png');
+                                  counter++;
+            if (counter> img_counter){
+                counter=1;
+            }
+                    },1000000);
+            });
+            
+              
+                    });
+                </script>
+            </body>
+            </html>

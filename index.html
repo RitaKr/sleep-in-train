@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <title>Sleep In Train with your playlist</title>
+</head>
+<body>
+    <header>
+        <div id="background"></div>
+        <div>
+            <h1>SLEEP IN TRAIN</h1>
+            <h2>Experience sleeping in train with your favourite music playing in your headphones</h2>
+            <div id="hedphones-div">
+                <h3>Use headphones (erphones) for better experience</h3>
+                <img src="images/headphones-solid.svg" class="headphones">
+            </div>
+        </div>
+        <div class="control">
+            <div id="c1" name="1"></div>
+            <div id="c2" name="2"></div>
+            <div id="c3" name="3"></div>
+            <div id="c4" name="4"></div>
+            <div id="c5" name="5"></div>
+            <div id="c6" name="6"></div>
+            <div id="c7" name="7"></div>
+        </div>
+    </header>
+    <div id="main">
+        
+        <div id="play-train">
+            <h2>Play train sound</h2>
+            <button class="play"></button>
+        </div>
+        
+        <div id="spotify-player">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2MqKdstlrUQUa9PD7vEnSt?utm_source=generator" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+        <div id="form">
+            <h3>Want your own music? Paste a link to Spotify playlist or album below</h3>
+            <input type="text" id="url-input" name="userPlaylistUrl" placeholder="Paste your spotify link here" value="" autocomplete="off">
+            <button id="submit-url" class="btn">Submit playlist</button>
+            <!--<input type="submit" id="submit-url" value="Load playlist">-->
+        </div>
+        <button id="changeBg" class="btn">Change background gif</button>
+    </div>
+</body>
+<script src='jquery-3.4.1.slim.js'></script>
+            
+<script src="script.js"></script>
+<script src="slider.js">
+</script>
+</html>
