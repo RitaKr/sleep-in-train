@@ -96,11 +96,11 @@ function embendUserPlaylistYoutube(){
 }
 
 let audio = new Audio('mp3/train-sound.mp3');
-audio.volume = 0.8;
+audio.volume = 1;
 let volume = document.querySelector("#volume-control");
 volume.addEventListener("change", function(e) {
     console.log(audio.volume, e.currentTarget.value);
-    audio.volume = (e.currentTarget.value / 100)*0.8;
+    audio.volume = e.currentTarget.value / 100;
     })
 playBtn.addEventListener('click', ()=>{
     /*audio.addEventListener("canplaythrough", event => {
