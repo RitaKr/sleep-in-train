@@ -99,7 +99,7 @@ let audio = new Audio('mp3/train-sound.mp3');
 audio.volume = 0.8;
 let volume = document.querySelector("#volume-control");
 volume.addEventListener("change", function(e) {
-    console.log(audio.volume, e.currentTarget.value);
+    console.log(audio.volume, e.currentTarget.value/ 100*0.8);
     audio.volume = (e.currentTarget.value / 100)*0.8;
     })
 playBtn.addEventListener('click', ()=>{
@@ -122,5 +122,4 @@ playBtn.addEventListener('click', ()=>{
       
     //console.log(audio.paused)
 })
-
 
