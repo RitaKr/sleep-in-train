@@ -1,4 +1,4 @@
-# Sleep In Train page
+# Sleep In Train
 
 This web-application is made 
 for people with insomnia,
